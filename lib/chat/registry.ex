@@ -23,9 +23,6 @@ defmodule Chat.Registry do
   end
 
   def send(room_name, message) do
-
-    IO.puts "=== `send` called ===\r\nNAME: #{room_name} MESSAGE: #{message}"
-
     case whereis_name(room_name) do
       :undefined ->
         {:badarg, {room_name, message}}

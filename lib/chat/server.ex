@@ -24,7 +24,6 @@ defmodule Chat.Server do
   end
 
   def handle_cast({:add_message, new_message}, message) do
-    IO.puts [new_message | message]
     {:noreply, [new_message | message]}
   end
 
